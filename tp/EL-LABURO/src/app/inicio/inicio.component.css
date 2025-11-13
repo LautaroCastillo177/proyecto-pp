@@ -1,0 +1,123 @@
+.ponele {
+  margin:  auto;
+  background-color: #e3d395; 
+}
+.jamon {
+  color: #e7b324;
+  background: #403728;
+ 
+}
+.section {
+    background-color: #6a0dad;  /* Morado oscuro */
+    color:#f4c542;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Título dentro de la sección */
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #dcde66;
+  }
+  
+  /* Descripción dentro de la sección */
+  .section-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Estilo para el botón */
+  .explore-button {
+    background-color: #e7b324; /* Un morado claro */
+    color: #000000;  /* Texto morado oscuro */
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .explore-button:hover {
+    background-color: #ce6c2a;
+    color: #000000;
+  }
+  
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(145deg, #1e1e2f, #2e2e3e);
+    color: #fefefe;
+  }
+  
+  header {
+    padding: 2rem;
+    text-align: center;
+    background: #111122;
+  }
+  
+  header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+  }
+  
+  .icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #f4c542;
+  }
+  
+  .section {
+    max-width: 600px;
+    background: #282840;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .section h2 {
+    font-family: 'DM Serif Display', serif;
+    color: #f4c542;
+    margin-bottom: 1rem;
+  }
+  
+  .section p {
+    line-height: 1.6;
+    color: #ddd;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: #888;
+    background: #111122;
+  }
+
+
+  .fotocarrusel{
+    width: 57rem;
+  }
+
+  #guidotext{
+    margin-top: 20px;
+  }

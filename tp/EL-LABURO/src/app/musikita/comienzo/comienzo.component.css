@@ -1,0 +1,72 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo general */
+.MEDUELELAPANZA {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Contenedor del formulario */
+.login-container {
+ max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+/* Título */
+.login-container h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Campos de texto */
+.login-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Botón */
+.login-container button {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #0056b3;
+}
+.boton-link:hover {
+  background-color: #45a049;
+  border-bottom: #0056b3;
+}
+
+

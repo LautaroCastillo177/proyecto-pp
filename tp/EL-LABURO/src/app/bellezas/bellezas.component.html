@@ -1,0 +1,82 @@
+<div>
+  <title>Galería de Guitarras</title>
+
+
+  <h1>🎸 Galería de Guitarras</h1>
+
+<!--
+ * <div class="container">
+    <ng-container *ngIf="productos && productos.length">
+      <ng-container *ngFor="let producto of productos">
+        <div *ngIf="producto.disponible" class="card">
+          <img [src]="producto.imagen" />
+          <div class="info">
+            <h2>{{producto.nombre}}</h2>
+            <p>{{producto.descripccion}}</p>
+            <p>${{producto.precio}}</p>
+
+            <button class="btn-rock" (click)="agregar(producto)">R0CK</button
+              -->
+
+          </div>
+        <div class="filtros">
+          <div class="row mb-3">
+            <div class="col-md-3">
+              <label>categoria:</label>
+              <select class="form-select" [(ngModel)]="selectedCategory" name="categoria">
+                <option value="">todas</option>
+                <option *ngFor="let categoria of categories" [value]="categoria">{{categoria}}</option>
+              </select>
+            </div>
+
+
+             <div class="col-md-3">
+              <label>marca:</label>
+              <select class="form-select" [(ngModel)]="selectedCategory" name="marca">
+                <option value="">marca</option>
+                <option *ngFor="let categoria of categories" [value]="marca">{{marca}}</option>
+              </select>
+            </div>
+
+            <div class="col-md-2">
+              <label >precio min:</label>
+              <input type="number" class="form-control" [(ngModel)]="minprecio" name="minprecio">
+            </div>
+
+            <div class="col-md-2">
+              <label >precio max:</label>
+              <input type="number" class="form-control" [(ngModel)]="maxprecio" name="maxprecio">
+            </div>
+            <div class="col-md-2 d-flex align-items-end">
+              <button class="btn btn-secondary w-100" (click)="resetFilters()">
+                <div class="button-top">limpiar</div>
+              </button>
+            </div>
+          </div>
+          <div class="card-container">
+  <ng-container *ngIf="filteredProducts && filteredProducts.length">
+    <ng-container *ngFor="let producto of filteredProducts">
+      <div *ngIf="producto.disponible" class="card">
+        <img [src]="producto.imagen" alt="{{producto.nombre}}" class="producto-image">
+
+        <!-- Aquí va el bloque con la clase .info -->
+        <div class="info">
+          <h2>{{producto.nombre}}</h2>
+          <p>{{producto.descripccion}}</p>
+          <p>Precio: {{producto.precio | currency:'ARS'}}</p>
+          <p>Cantidad: {{producto.cantidad}}</p>
+          <p>Marca: {{producto.marca}}</p>
+        </div>
+
+        <!-- Botón con estilo personalizado -->
+        <button type="button" class="btn-rock w-100 mt-2" (click)="agregar(producto)">
+          Agregar al carrito
+        </button>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <div *ngIf="filteredProducts.length === 0" class="text-muted">
+    No se encontraron productos
+  </div>
+</div>

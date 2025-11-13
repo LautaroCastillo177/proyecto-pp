@@ -1,0 +1,93 @@
+/* Reset básico */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #e8f0fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.MEDUELELAPANZA {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Contenedor del formulario */
+.registro-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 320px;
+}
+
+/* Título */
+.registro-container h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #222;
+}
+
+/* Etiquetas y campos */
+.registro-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.registro-container input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+/* Botón */
+.registro-container button {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.registro-container button:hover {
+  background-color: #1e7e34;
+}
+.boton-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* verde */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-link:hover {
+  background-color: #45a049;
+  border-bottom: #1e7e34;
+}
