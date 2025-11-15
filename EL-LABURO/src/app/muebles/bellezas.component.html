@@ -1,0 +1,75 @@
+<div>
+
+
+
+  <h1 id="titulo">Muebles</h1>
+
+  <!--
+ * <div class="container">
+    <ng-container *ngIf="productos && productos.length">
+      <ng-container *ngFor="let producto of productos">
+        <div *ngIf="producto.disponible" class="card">
+          <img [src]="producto.imagen" />
+          <div class="info">
+            <h2>{{producto.nombre}}</h2>
+            <p>{{producto.descripccion}}</p>
+            <p>${{producto.precio}}</p>
+
+            <button class="btn-rock" (click)="agregar(producto)">R0CK</button
+              -->
+
+</div>
+<div class="filtros">
+  <div class="row mb-3">
+    <div class="col-md-3">
+      <label>categoria:</label>
+      <select class="form-select" [(ngModel)]="selectedCategory" name="categoria">
+        <option value="">todas</option>
+        <option *ngFor="let categoria of categories" [value]="categoria">{{categoria}}</option>
+      </select>
+    </div>
+
+
+
+    <div class="col-md-2">
+      <label>precio min:</label>
+      <input type="number" class="form-control" [(ngModel)]="minprecio" name="minprecio">
+    </div>
+
+    <div class="col-md-2">
+      <label>precio max:</label>
+      <input type="number" class="form-control" [(ngModel)]="maxprecio" name="maxprecio">
+    </div>
+    <div class="col-md-2 d-flex align-items-end">
+      <button class="btn btn-secondary w-100" (click)="resetFilters()">
+        <div class="button-top">limpiar</div>
+      </button>
+    </div>
+  </div>
+
+
+
+
+<div id="card-producto" class="producto-card">
+  <a id="link-producto" routerLink="/producto/...">
+    <div class="img-container">
+      <img id="imagen-producto" src="assets/mueble1.jpg" alt="Mesa ratona">
+      <div class="shine"></div>
+    </div>
+  </a>
+  <div id="card-body-producto">
+    <h5 id="titulo-producto">Mesa ratona</h5>
+    <p id="descripcion-producto">Mesa ratona 3x4...</p>
+    <p id="precio-producto">$400.000</p>
+
+    <button id="btn-agregar">Agregar al carrito</button>
+  </div>
+</div>
+
+
+
+
+  <div *ngIf="filteredProducts.length === 0" class="text-muted">
+    No se encontraron productos
+  </div>
+</div>

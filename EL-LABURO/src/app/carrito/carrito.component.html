@@ -1,0 +1,48 @@
+<h1>carrito de compras</h1>
+<div *ngIf="productosEnCarrito.length===0" class="alert alert-warning text-center">
+    <p>no hay productos en el carrito</p>
+</div>
+<div *ngIf="productosEnCarrito.length > 0" class="container">
+<table class="table">
+    <thead>
+        <tr>
+            <th>imagen</th>
+            <th>nombre</th>
+            <th>descripccion</th>
+            <th>precio</th>
+            <th>cantidad</th>
+            <th>acciones</th>
+            
+        </tr>
+    </thead>
+<tbody>
+    <tr *ngFor="let item of productosEnCarrito; let i = index">
+        <td>
+            <img [src]="item.producto.imagen" alt="{{item.producto.nombre}}"  class="img-thumbnail" style="width: 70px;" height="70px"> 
+        </td>
+        <td class="fw-bold">{{ item.producto.nombre }}</td>
+       
+        <td>{{item.producto.descripccion}}</td>
+        <td>{{ item.producto.precio | currency }}</td>
+        <td>
+        <div class="btn-group" role="group" aria-label="Cantidad">
+            <button (click)="quitarCantidad(i)" class="btn btn-outline-danger btn-sm">-</button>
+             <span class="px-2">{{ item.cantidad }}</span>
+            <button (click)="agregarCantidad(i)" class="btn btn-outline-success btn-sm">+</button>
+        </div>
+    </td>
+        <td>
+            <button class="btn btn-outline-danger btn-sm" (click)="eliminarProducto(item.producto.id)"><i class="bi bi-trash">
+            </i> Eliminar
+          </button>
+        </td>
+    </tr>
+</tbody>
+</table>
+<!--<button (click)="realizarcompra()" class="btn btn-success">realizar compra</button>-->
+<div class="text-end mt-4" *ngIf="productosEnCarrito.length > 0" >
+    <h4 class="fw-bold">total: {{calcularTotal() | currency}}</h4>
+    <button class="btn btn-primary mt-2" (click)="irAformularioCompra()">
+        <i class="bi bi-card-check"></i> realizar compra
+    </button>
+</div></div>

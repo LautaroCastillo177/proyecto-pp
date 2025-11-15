@@ -1,0 +1,45 @@
+/*estilos para modo oscuro*/
+body{
+    transition: all 1.5s ease;
+     padding-top: 70px; /* o el valor que te quede bien */
+      background-color: #fff5d3; 
+ }
+
+#toggle{
+    display: none;
+}
+#label_toggle{
+    position: static;
+    cursor: pointer;
+}
+.dark{
+    background-color: black;
+    color: blanchedalmond;
+    transition: all 1.5s ease;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* 1) Asegurate que el overlay (donde Angular Material inyecta los menús)
+   esté por encima del navbar fijo. */
+.cdk-overlay-container {
+  z-index: 3000; /* o 4000 si tu navbar tiene un z-index alto */
+}
+
+/* 2) Elevá el panel del menú (prueba ambas clases: MDC y no-MDC) */
+.mat-menu-panel,
+.mat-mdc-menu-panel,
+.mat-mdc-menu,
+.mat-menu-panel {
+  z-index: 3100 !important;
+  /* separacion opcional del trigger, si querés */
+  margin-top: 6px !important;
+}
+
+/* 3) Si el navbar tiene overflow oculto podría “recortar” el menú.
+   Asegurate que el navbar no tenga overflow:hidden; si lo tiene, cambialo: */
+.navbar {
+  overflow: visible !important;
+}

@@ -1,0 +1,138 @@
+body {
+background-color: #726454;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+   font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-style: normal;
+  color: #ac8962;
+  text-shadow: 2px 2px 12px #85807b, 0 0 5px #d4cdac;
+}
+
+#titulo{
+  margin-top: 30px;
+}
+
+/* --- CARD GENERAL --- */
+#card-producto {
+  width: 320px;
+  background: #fff8e8;
+  border-radius: 14px;
+  overflow: hidden;
+  padding-bottom: 25px; /* antes 15px */
+  border: 1px solid #e0d5b5;
+  margin: 20px auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+
+#card-producto:hover {
+  transform: translateY(-5px);
+}
+
+
+/* --- CONTENEDOR DE IMAGEN (para controlar la estela) --- */
+.img-container {
+  position: relative;
+  width: 100%;
+  height: 230px; /* 👈 un poco más alta */
+  overflow: hidden;
+}
+
+
+/* --- IMAGEN DEL PRODUCTO --- */
+#imagen-producto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center; /* 👈 evita zoom exagerado */
+  transition: transform .5s ease, filter .5s ease;
+}
+
+/* ZOOM LEVE */
+.img-container {
+  position: relative;
+  width: 100%;
+  height: 320px;    /* 👈 Ahora es cuadrada si tu card mide 320px de ancho */
+  overflow: hidden;
+}
+
+
+
+/* --- ESTELA (shine) --- */
+.shine {
+  position: absolute;
+  top: 0;
+  left: -100%; /* Empieza fuera a la izquierda */
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,0.25) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+/* --- ANIMACIÓN DE ESTELA --- */
+.img-container:hover .shine {
+  left: 120%; /* Se mueve completamente hacia la derecha */
+}
+
+
+/* --- CUERPO DE LA CARD --- */
+#card-body-producto {
+  padding: 15px;
+}
+
+
+/* --- TITULO --- */
+#titulo-producto {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #5a3e2b;
+  margin-bottom: 5px;
+}
+
+
+/* --- DESCRIPCIÓN --- */
+#descripcion-producto {
+  color: #6d6d6d;
+  font-size: 0.95rem;
+}
+
+
+/* --- PRECIO --- */
+#precio-producto {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #b05a1e;
+  margin: 10px 0;
+}
+
+
+/* --- BOTÓN --- */
+#btn-agregar {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #c59b58, #d2b97d);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btn-agregar:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #b78a4c, #c9ac6e);
+}
